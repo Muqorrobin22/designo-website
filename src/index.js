@@ -9,6 +9,7 @@ import {
   WebDesign,
 } from "./components/Services/MainServices";
 import AboutMain from "./components/about/AboutMain";
+import LocationMain from "./components/locations/LocationMain";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,6 +17,7 @@ ReactDOM.render(
       <Routes>
         <Route path="/" element={<MainHome />} />
         <Route path="/about" element={<AboutMain />} />
+        <Route path="/location" element={<LocationMain />} />
         <Route path="/web-design" element={<WebDesign />} />
         <Route path="/app-design" element={<AppDesign />} />
         <Route path="/graphic-design" element={<GraphicDesign />} />

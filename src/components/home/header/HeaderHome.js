@@ -12,7 +12,7 @@ function HeaderHome() {
           fully responsive websites, app design, and engaging brand experiences.
           Find out more about our services.
         </p>
-        <Button1 dark to="/">
+        <Button1 dark to="/about">
           Learn more
         </Button1>
         <img src={Image} alt={Image} />
