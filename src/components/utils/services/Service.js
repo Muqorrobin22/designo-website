@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { ReactComponent as Arrow } from "../../../assets/shared/desktop/icon-right-arrow.svg";
 
-function Service({ images, title, margin }) {
+function Service({ images, title, margin, to }) {
   return (
     <ServiceWrap images={images} margin={margin}>
       <div className="info">
         <h1> {title} </h1>
         <div className="link">
-          <Link to="service">View Project</Link>
+          <Link to={`/${to}`}>View Project</Link>
           <Arrow />
         </div>
       </div>

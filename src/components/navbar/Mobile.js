@@ -14,17 +14,17 @@ function Mobile() {
       <MenuWrap>
         <ul>
           <li>
-            <NavLink to="/" style={isActive}>
+            <NavLink to="/about" style={isActive}>
               our company
             </NavLink>
           </li>
           <li>
-            <NavLink to="/stories" style={isActive}>
+            <NavLink to="/location" style={isActive}>
               locations
             </NavLink>
           </li>
           <li>
-            <NavLink to="/features" style={isActive}>
+            <NavLink to="/contact" style={isActive}>
               contact
             </NavLink>
           </li>

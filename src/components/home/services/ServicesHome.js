@@ -1,30 +1,22 @@
 import React from "react";
-import WebDesign from "../../../assets/home/mobile/image-web-design.jpg";
-import AppDesign from "../../../assets/home/mobile/image-app-design.jpg";
-import GraphicDesign from "../../../assets/home/mobile/image-graphic-design.jpg";
+
 import styled from "styled-components";
 import Service from "../../utils/services/Service";
+import { servicesData } from "../../utils/services/ServiceData";
 
-const ServiceData = [
-  {
-    title: "Web Design",
-    img: WebDesign,
-  },
-  {
-    title: "App Design",
-    img: AppDesign,
-  },
-  {
-    title: "Graphic Design",
-    img: GraphicDesign,
-  },
-];
+const ServiceData = servicesData();
 
 function ServicesHome() {
   return (
     <ServiceWrap>
       {ServiceData.map((data) => (
-        <Service margin key={data.title} title={data.title} images={data.img} />
+        <Service
+          margin
+          key={data.title}
+          title={data.title}
+          images={data.img}
+          to={data.to}
+        />
       ))}
     </ServiceWrap>
   );
