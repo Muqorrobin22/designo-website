@@ -81,31 +81,38 @@ const HeaderWrap = styled.header`
   }
 
   @media (min-width: 768px) {
-    display: grid;
-    grid-template-columns: minmax(49.5rem, 61rem) minmax(27.3rem, 83rem);
-    .img {
-      order: 2;
-      img {
-        height: 100%;
-        width: 100%;
-      }
-    }
+    margin: 4rem;
+    border-radius: 15px;
+    height: 90rem;
     .info {
       margin-top: 0;
       order: 1;
       height: auto;
-      padding: 17.3rem 5.4rem;
       h1 {
-        font-size: 4rem;
-        width: 38.7rem;
+        font-family: Jost;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 48px;
+        /* or 100% */
+
+        text-align: center;
+
+        color: #ffffff;
+        width: 80%;
       }
       p {
-        font-size: 1.5rem;
-        width: 38.7rem;
-      }
-      div {
-        width: 38.7rem;
-        margin-left: 0;
+        font-family: Jost;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 26px;
+        /* or 162% */
+
+        text-align: center;
+
+        color: #ffffff;
+        width: 80%;
       }
     }
   }
