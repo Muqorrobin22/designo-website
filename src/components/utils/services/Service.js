@@ -81,6 +81,28 @@ const ServiceWrap = styled.div`
     background-color: black;
     opacity: 0.5;
   }
+  @media (min-width: 768px) {
+    width: 68.9rem;
+    .info {
+      text-align: center;
+      h1 {
+        font-family: Jost;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 48px;
+        /* identical to box height, or 120% */
+
+        letter-spacing: 2px;
+
+        color: #ffffff;
+        width: 50rem;
+      }
+      .link {
+        margin: 0 auto;
+      }
+    }
+  }
 `;
 
 export default Service;

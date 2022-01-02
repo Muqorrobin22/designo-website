@@ -3,10 +3,6 @@ import styled from "styled-components";
 import { Button1 } from "../../utils/Buttons/Button";
 import Image from "./../../../assets/home/desktop/image-hero-phone.png";
 // import imagesTablet from "./../../../assets/home/tablet/image-web-design.jpg";
-// import { useMediaQuery } from "react-responsive";
-
-// const isTablet = useMediaQuery({ query: "(min-width: 768px)" });
-//   const isDesktop = useMediaQuery({ query: "(min-width: 1440px)" });
 
 //   let ImagesRendering;
 

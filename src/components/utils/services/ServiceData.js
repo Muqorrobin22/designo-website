@@ -1,6 +1,13 @@
 import WebDesign from "../../../assets/home/mobile/image-web-design.jpg";
+import WebDesignTablet from "../../../assets/home/tablet/image-web-design.jpg";
+import WebDesignDesktopLarge from "../../../assets/home/desktop/image-web-design-large.jpg";
+import WebDesignDesktopSmall from "../../../assets/home/desktop/image-web-design-small.jpg";
 import AppDesign from "../../../assets/home/mobile/image-app-design.jpg";
+import AppDesignTablet from "../../../assets/home/tablet/image-app-design.jpg";
+import AppDesignDektop from "../../../assets/home/desktop/image-app-design.jpg";
 import GraphicDesign from "../../../assets/home/mobile/image-graphic-design.jpg";
+import GraphicDesignTablet from "../../../assets/home/tablet/image-graphic-design.jpg";
+import GraphicDesignDesktop from "../../../assets/home/desktop/image-graphic-design.jpg";
 import WebImage1 from "../../../assets/web-design/desktop/image-express.jpg";
 import WebImage2 from "../../../assets/web-design/desktop/image-transfer.jpg";
 import WebImage3 from "../../../assets/web-design/desktop/image-photon.jpg";
@@ -20,6 +27,10 @@ const ServiceData = [
   {
     title: "Web Design",
     img: WebDesign,
+    imgTablet: WebDesignTablet,
+    imgDesktop: WebDesignDesktopLarge,
+    // imgDesktopLarge: WebDesignDesktopLarge,
+    // imgDesktopSmall: WebDesignDesktopSmall,
     to: "web-design",
     text: "We build websites that serve as powerful marketing tools and bring memorable brand experiences.",
     project: [
@@ -58,6 +69,8 @@ const ServiceData = [
   {
     title: "App Design",
     img: AppDesign,
+    imgTablet: AppDesignTablet,
+    imgDesktop: AppDesignDektop,
     to: "app-design",
     text: "Our mobile designs bring intuitive digital solutions to your customers right at their fingertips.",
     project: [
@@ -91,6 +104,8 @@ const ServiceData = [
   {
     title: "Graphic Design",
     img: GraphicDesign,
+    imgTablet: GraphicDesignTablet,
+    imgDesktop: GraphicDesignDesktop,
     to: "graphic-design",
     text: "We deliver eye-catching branding materials that are tailored to meet your business objectives.",
     project: [

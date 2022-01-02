@@ -3,11 +3,27 @@ import styled from "styled-components";
 
 function Features({ Svg, title, text }) {
   return (
-    <FeatureWrap>
+    <div>
+      <FeatureWrap>
+        {Svg}
+        <div>
+          <h1>{title}</h1>
+          <p> {text} </p>
+        </div>
+      </FeatureWrap>
+    </div>
+  );
+}
+
+export function FeaturesTablet({ Svg, title, text }) {
+  return (
+    <FeatureWrapTablet>
       {Svg}
-      <h1>{title}</h1>
-      <p> {text} </p>
-    </FeatureWrap>
+      <div>
+        <h1>{title}</h1>
+        <p> {text} </p>
+      </div>
+    </FeatureWrapTablet>
   );
 }
 
@@ -39,6 +55,29 @@ const FeatureWrap = styled.div`
     /* or 162% */
 
     text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
+`;
+
+const FeatureWrapTablet = styled(FeatureWrap)`
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  div {
+    display: flex;
+    text-align: left;
+    justify-content: flex-start;
+    width: 70%;
+    flex-direction: column;
+    align-items: flex-start;
+
+    p {
+      text-align: left;
+    }
   }
 `;
 

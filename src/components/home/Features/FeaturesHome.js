@@ -3,7 +3,8 @@ import { ReactComponent as Passionate } from "../../../assets/home/desktop/illus
 import { ReactComponent as Resource } from "../../../assets/home/desktop/illustration-resourceful.svg";
 import { ReactComponent as Friendly } from "../../../assets/home/desktop/illustration-friendly.svg";
 import styled from "styled-components";
-import Features from "../../utils/features/Features";
+import Features, { FeaturesTablet } from "../../utils/features/Features";
+import { useMediaQuery } from "react-responsive";
 
 const featureData = [
   {
@@ -24,18 +25,42 @@ const featureData = [
 ];
 
 function FeaturesHome() {
-  return (
-    <FeaturesWrap>
-      {featureData.map((data) => (
-        <Features
-          key={data.title}
-          Svg={data.svg}
-          title={data.title}
-          text={data.text}
-        />
-      ))}
-    </FeaturesWrap>
-  );
+  const isTablet = useMediaQuery({ query: "(min-width: 768px)" });
+  const isDesktop = useMediaQuery({ query: "(min-width: 1440px)" });
+
+  let renderComponent;
+
+  if (isDesktop) {
+    renderComponent = featureData.map((data) => (
+      <Features
+        key={data.title}
+        Svg={data.svg}
+        title={data.title}
+        text={data.text}
+      />
+    ));
+  } else if (isTablet) {
+    renderComponent = featureData.map((data) => (
+      <FeaturesTablet
+        key={data.title}
+        Svg={data.svg}
+        title={data.title}
+        text={data.text}
+        tablet={isTablet}
+      />
+    ));
+  } else {
+    renderComponent = featureData.map((data) => (
+      <Features
+        key={data.title}
+        Svg={data.svg}
+        title={data.title}
+        text={data.text}
+      />
+    ));
+  }
+
+  return <FeaturesWrap>{renderComponent}</FeaturesWrap>;
 }
 
 const FeaturesWrap = styled.div`
