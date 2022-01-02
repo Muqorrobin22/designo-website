@@ -1,13 +1,26 @@
 import React from "react";
 import styled from "styled-components";
 import ImageMobile3 from "../../../assets/about/mobile/image-real-deal.jpg";
+import ImageTablet3 from "../../../assets/about/tablet/image-real-deal.jpg";
+import ImageDesktop3 from "../../../assets/about/desktop/image-real-deal.jpg";
+import { useMediaQuery } from "react-responsive";
 
 function Main2() {
+  const isTablet = useMediaQuery({ query: "(min-width: 768px)" });
+  const isDesktop = useMediaQuery({ query: "(min-width: 1440px)" });
+
+  let imageRender1;
+
+  if (isDesktop) {
+    imageRender1 = <img src={ImageDesktop3} alt={ImageMobile3} />;
+  } else if (isTablet) {
+    imageRender1 = <img src={ImageTablet3} alt={ImageMobile3} />;
+  } else {
+    imageRender1 = <img src={ImageMobile3} alt={ImageMobile3} />;
+  }
   return (
     <Wrap>
-      <div className="img">
-        <img src={ImageMobile3} alt={ImageMobile3} />
-      </div>
+      <div className="img">{imageRender1}</div>
       <div className="info2">
         <h1>The real deal</h1>
         <p>
@@ -78,6 +91,30 @@ const Wrap = styled.div`
       p {
         font-size: 1.6rem;
         width: 90%;
+      }
+    }
+  }
+  @media (min-width: 1440px) {
+    margin: 0 16.5rem;
+
+    display: flex;
+    flex-direction: row-reverse;
+    .img {
+      width: 40%;
+      img {
+        height: 100%;
+      }
+    }
+    .info2 {
+      width: 60%;
+      height: auto;
+      align-items: flex-start;
+      padding-left: 9.4rem;
+      overflow: hidden;
+      p,
+      h1 {
+        text-align: left;
+        width: 45.8rem;
       }
     }
   }

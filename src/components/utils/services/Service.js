@@ -103,6 +103,11 @@ const ServiceWrap = styled.div`
       }
     }
   }
+
+  @media (min-width: 1440px) {
+    width: 54.1rem;
+    height: 30.8rem;
+  }
 `;
 
 export default Service;

@@ -7,23 +7,27 @@ function Header() {
   return (
     <HeaderWrap>
       <div className="wrap">
-        <h1>Contact us</h1>
-        <p>
-          Ready to take it to the next level? Let’s talk about your project or
-          idea and find out how we can help your business grow. If you are
-          looking for unique digital experiences that’s relatable to your users,
-          drop us a line.
-        </p>
-        <div className="inputs">
-          <Input type="text" placeholder="Name" />
-          <Input type="email" placeholder="Email Address" />
-          <Input type="number" placeholder="Phone" />
-          <TextArea placeholder="Your Messages" />
+        <div className="wrapText">
+          <h1>Contact us</h1>
+          <p>
+            Ready to take it to the next level? Let’s talk about your project or
+            idea and find out how we can help your business grow. If you are
+            looking for unique digital experiences that’s relatable to your
+            users, drop us a line.
+          </p>
         </div>
-        <div className="button">
-          <Button1 to="/contact" dark>
-            Submit
-          </Button1>
+        <div className="wrapInput">
+          <div className="inputs">
+            <Input type="text" placeholder="Name" />
+            <Input type="email" placeholder="Email Address" />
+            <Input type="number" placeholder="Phone" />
+            <TextArea placeholder="Your Messages" />
+          </div>
+          <div className="button">
+            <Button1 to="/contact" dark>
+              Submit
+            </Button1>
+          </div>
         </div>
       </div>
     </HeaderWrap>
@@ -74,6 +78,24 @@ const HeaderWrap = styled.div`
     .inputs {
       width: 95%;
     }
+
+    .wrapInput {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .button {
+        align-self: center;
+        margin-top: 3rem;
+      }
+    }
+
+    .wrapText {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   @media (min-width: 768px) {
@@ -95,6 +117,26 @@ const HeaderWrap = styled.div`
       }
       .button {
         align-self: flex-end;
+      }
+    }
+  }
+
+  @media (min-width: 1440px) {
+    margin: 1rem 16.5rem;
+    height: 48rem;
+    .wrap {
+      display: flex;
+      flex-direction: row;
+      .wrapText {
+        p,
+        h1 {
+          width: 80%;
+        }
+      }
+      .wrapInput {
+        .button {
+          align-self: flex-end;
+        }
       }
     }
   }

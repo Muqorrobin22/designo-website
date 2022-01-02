@@ -36,6 +36,10 @@ const AboutWrap = styled.div`
       color: #333136;
     }
   }
+
+  @media (min-width: 1440px) {
+    width: 35rem;
+  }
 `;
 
 export default About;

@@ -75,6 +75,8 @@ const TouchWrap = styled.div`
     justify-content: space-between;
     padding: 0 9.5rem;
     box-sizing: border-box;
+    top: -35%;
+    height: 29.2rem;
     .text {
       h1 {
         font-size: 4.8rem;

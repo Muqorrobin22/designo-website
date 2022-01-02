@@ -87,4 +87,8 @@ const HeaderWrap = styled.div`
       }
     }
   }
+
+  @media (min-width: 1440px) {
+    margin: 12rem 16.5rem;
+  }
 `;

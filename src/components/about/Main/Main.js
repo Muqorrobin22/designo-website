@@ -18,6 +18,12 @@ function Main() {
 const MainWrap = styled.div`
   margin-top: 12rem;
   margin-bottom: 12rem;
+
+  @media (min-width: 1440px) {
+    display: flex;
+    margin: 12rem 16.5rem;
+    justify-content: space-between;
+  }
 `;
 
 export default Main;

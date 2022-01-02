@@ -187,8 +187,9 @@ const FooterWrap = styled.footer`
       align-items: center;
       justify-content: space-between;
       width: 100%;
+      padding-left: 10rem;
       img {
-        width: 25%;
+        width: 20.2rem;
       }
       ul {
         display: flex;
@@ -221,12 +222,20 @@ const FooterWrap = styled.footer`
   @media (min-width: 1440px) {
     padding-left: 16.5rem;
     padding-right: 16.5rem;
+    .row1 {
+      padding-left: 10rem;
+      img {
+        width: 20.2rem;
+      }
+    }
   }
 `;
 
 const FooterWrapInGetTouch = styled(FooterWrap)`
   position: relative;
-  margin-top: 31rem;
+  @media (min-width: 1440px) {
+    margin-top: 31rem;
+  }
   .row1 {
     margin-top: 25rem;
   }

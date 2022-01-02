@@ -9,14 +9,16 @@ function Location({ Images, title, address, contact1, contact2 }) {
       </div>
       <div className="info2">
         <h1> {title} </h1>
-        <div>
-          <h2>Designo Central Office</h2>
-          <p>{address}</p>
-        </div>
-        <div>
-          <h2>Contact </h2>
-          <p>{contact1}</p>
-          <p>{contact2}</p>
+        <div className="information">
+          <div>
+            <h2>Designo Central Office</h2>
+            <p>{address}</p>
+          </div>
+          <div>
+            <h2>Contact </h2>
+            <p>{contact1}</p>
+            <p>{contact2}</p>
+          </div>
         </div>
       </div>
     </Wrap>
@@ -24,7 +26,6 @@ function Location({ Images, title, address, contact1, contact2 }) {
 }
 
 const Wrap = styled.div`
-  margin-bottom: 4rem;
   .img {
     img {
       width: 100%;
@@ -81,6 +82,41 @@ const Wrap = styled.div`
       margin: 4rem 4rem 12rem 4rem;
       border-radius: 15px;
       overflow: hidden;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16.5rem;
+    .img {
+      width: 40%;
+      img {
+        height: 32.6rem;
+      }
+    }
+    .info2 {
+      width: 80%;
+      height: 32.6rem;
+      align-items: flex-start;
+      padding: 8.8rem 9.5rem;
+      box-sizing: border-box;
+      h1 {
+      }
+      .information {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        width: 80%;
+        h2,
+        p {
+          text-align: left;
+          width: 25.5rem;
+        }
+      }
+    }
+    &:nth-child(odd) {
+      flex-direction: row-reverse;
     }
   }
 `;

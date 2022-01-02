@@ -105,4 +105,18 @@ const MainServicesWrap = styled.div`
       align-items: center;
     }
   }
+
+  @media (min-width: 1440px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 12rem 10rem;
+    .data {
+      flex-direction: row;
+      margin: 12rem 10rem;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
 `;

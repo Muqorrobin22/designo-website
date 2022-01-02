@@ -124,6 +124,10 @@ const NavWrap = styled.nav`
       }
     }
   }
+
+  @media (min-width: 1440px) {
+    padding: 0 16.5rem;
+  }
 `;
 
 export default Navbar;

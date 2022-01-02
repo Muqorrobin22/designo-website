@@ -131,6 +131,37 @@ const HeaderWrap = styled.div`
       }
     }
   }
+
+  @media (min-width: 1440px) {
+    margin: 0 12rem;
+    .div1,
+    .div2 {
+      display: flex;
+      flex-direction: row-reverse;
+      .img {
+        width: 40%;
+        img {
+          height: 100%;
+        }
+      }
+      .info,
+      .info2 {
+        width: 60%;
+        height: auto;
+        align-items: flex-start;
+        padding-left: 9.4rem;
+        overflow: hidden;
+        p,
+        h1 {
+          text-align: left;
+          width: 45.8rem;
+        }
+      }
+    }
+    .div2 {
+      flex-direction: row;
+    }
+  }
 `;
 
 export default Header;

@@ -20,6 +20,7 @@ const ShowCastWrap = styled.div`
   overflow: hidden;
   background-color: #fdf3f0;
   margin-top: 4rem;
+  position: relative;
   .img {
     height: 70%;
     img {
@@ -74,9 +75,15 @@ const ShowCastWrap = styled.div`
 
   @media (min-width: 768px) {
     display: flex;
+    align-items: center;
+    margin: 4rem;
     .description {
-      transform: translateY(50%);
     }
+  }
+
+  @media (min-width: 1440px) {
+    flex-direction: column;
+    width: 35rem;
   }
 `;
 
