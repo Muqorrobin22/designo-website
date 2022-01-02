@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 
 const isActive = ({ isActive }) => {
   return {
-    opacity: isActive ? "0.3" : "",
+    textDecoration: isActive ? "underline" : "none",
   };
 };
 
@@ -109,16 +109,16 @@ const NavWrap = styled.nav`
           list-style: none;
           padding-left: 1.7rem;
           a {
-            text-decoration: none;
-            font-family: DM Sans;
+            font-family: Jost;
             font-style: normal;
-            font-weight: bold;
-            font-size: 1.2rem;
-            line-height: 20px;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 14px;
+            letter-spacing: 2px;
+            text-decoration: none;
+            color: #333136;
             text-align: center;
-            letter-spacing: 2.5px;
             text-transform: uppercase;
-            color: black;
           }
         }
       }
