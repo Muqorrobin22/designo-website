@@ -26,6 +26,7 @@ import GraphImage3 from "../../../assets/graphic-design/desktop/image-science.jp
 const ServiceData = [
   {
     title: "Web Design",
+    class: "web",
     img: WebDesign,
     imgTablet: WebDesignTablet,
     imgDesktop: WebDesignDesktopLarge,
@@ -68,6 +69,7 @@ const ServiceData = [
   },
   {
     title: "App Design",
+    class: "app",
     img: AppDesign,
     imgTablet: AppDesignTablet,
     imgDesktop: AppDesignDektop,
@@ -103,6 +105,7 @@ const ServiceData = [
   },
   {
     title: "Graphic Design",
+    class: "graph",
     img: GraphicDesign,
     imgTablet: GraphicDesignTablet,
     imgDesktop: GraphicDesignDesktop,

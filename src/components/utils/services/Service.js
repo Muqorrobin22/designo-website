@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { ReactComponent as Arrow } from "../../../assets/shared/desktop/icon-right-arrow.svg";
 
-function Service({ images, title, margin, to }) {
+function Service({ images, title, margin, to, grid }) {
   return (
-    <ServiceWrap images={images} margin={margin}>
+    <ServiceWrap images={images} margin={margin} grid={grid}>
       <div className="info">
         <h1> {title} </h1>
         <div className="link">
@@ -80,6 +80,7 @@ const ServiceWrap = styled.div`
     z-index: 2;
     background-color: black;
     opacity: 0.5;
+    transition: all 0.3s ease;
   }
   @media (min-width: 768px) {
     width: 68.9rem;
@@ -106,7 +107,7 @@ const ServiceWrap = styled.div`
 
   @media (min-width: 1440px) {
     width: 54.1rem;
-    height: 30.8rem;
+    height: ${(props) => (props.grid ? "67rem" : "30.8rem")};
   }
 `;
 
