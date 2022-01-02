@@ -28,7 +28,6 @@ function Main2() {
 const Wrap = styled.div`
   margin: 12rem 0;
   .img {
-    height: 32rem;
     img {
       width: 100%;
       background-size: cover;
@@ -65,6 +64,21 @@ const Wrap = styled.div`
       text-align: center;
       width: 32.7rem;
       color: black;
+    }
+  }
+
+  @media (min-width: 768px) {
+    margin: 4rem 4rem 12rem 4rem;
+    border-radius: 15px;
+    overflow: hidden;
+    .info2 {
+      h1 {
+        font-size: 4.8rem;
+      }
+      p {
+        font-size: 1.6rem;
+        width: 90%;
+      }
     }
   }
 `;

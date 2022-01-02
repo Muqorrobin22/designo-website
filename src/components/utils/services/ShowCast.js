@@ -65,6 +65,18 @@ const ShowCastWrap = styled.div`
   &:hover {
     opacity: 0.8;
     transform: translateY(-1rem);
+    background-color: var(--color-primary-peach);
+    .description p,
+    .description h1 {
+      color: white;
+    }
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    .description {
+      transform: translateY(50%);
+    }
   }
 `;
 

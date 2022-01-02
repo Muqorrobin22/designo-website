@@ -20,9 +20,11 @@ function Header() {
           <Input type="number" placeholder="Phone" />
           <TextArea placeholder="Your Messages" />
         </div>
-        <Button1 to="/contact" dark>
-          Submit
-        </Button1>
+        <div className="button">
+          <Button1 to="/contact" dark>
+            Submit
+          </Button1>
+        </div>
       </div>
     </HeaderWrap>
   );
@@ -71,6 +73,29 @@ const HeaderWrap = styled.div`
     }
     .inputs {
       width: 95%;
+    }
+  }
+
+  @media (min-width: 768px) {
+    margin: 4rem 4rem 12rem 4rem;
+    padding: 7.1rem;
+    .wrap {
+      h1 {
+        font-size: 4.8rem;
+        text-align: left;
+        width: 90%;
+      }
+      p {
+        font-size: 1.6rem;
+        text-align: left;
+        width: 90%;
+      }
+      .inputs {
+        width: 90%;
+      }
+      .button {
+        align-self: flex-end;
+      }
     }
   }
 `;

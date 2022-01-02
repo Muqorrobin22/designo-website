@@ -26,7 +26,6 @@ function Location({ Images, title, address, contact1, contact2 }) {
 const Wrap = styled.div`
   margin-bottom: 4rem;
   .img {
-    height: 32rem;
     img {
       width: 100%;
       background-size: cover;
@@ -69,6 +68,19 @@ const Wrap = styled.div`
       text-align: center;
       width: 32.7rem;
       color: black;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .img {
+      margin: 4rem;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+    .info2 {
+      margin: 4rem 4rem 12rem 4rem;
+      border-radius: 15px;
+      overflow: hidden;
     }
   }
 `;

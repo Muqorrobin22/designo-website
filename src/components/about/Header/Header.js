@@ -2,39 +2,62 @@ import React from "react";
 import styled from "styled-components";
 import ImageMobile1 from "../../../assets/about/mobile/image-about-hero.jpg";
 import ImageMobile2 from "../../../assets/about/mobile/image-world-class-talent.jpg";
+import ImageTablet1 from "../../../assets/about/tablet/image-about-hero.jpg";
+import ImageTablet2 from "../../../assets/about/tablet/image-world-class-talent.jpg";
+import ImageDesktop1 from "../../../assets/about/desktop/image-about-hero.jpg";
+import ImageDesktop2 from "../../../assets/about/desktop/image-world-class-talent.jpg";
+
+import { useMediaQuery } from "react-responsive";
 
 function Header() {
+  const isTablet = useMediaQuery({ query: "(min-width: 768px)" });
+  const isDesktop = useMediaQuery({ query: "(min-width: 1440px)" });
+
+  let imageRender1;
+  let imageRender2;
+
+  if (isDesktop) {
+    imageRender1 = <img src={ImageDesktop1} alt={ImageMobile1} />;
+    imageRender2 = <img src={ImageDesktop2} alt={ImageMobile1} />;
+  } else if (isTablet) {
+    imageRender1 = <img src={ImageTablet1} alt={ImageMobile1} />;
+    imageRender2 = <img src={ImageTablet2} alt={ImageMobile1} />;
+  } else {
+    imageRender1 = <img src={ImageMobile1} alt={ImageMobile1} />;
+    imageRender2 = <img src={ImageMobile2} alt={ImageMobile1} />;
+  }
+
   return (
     <HeaderWrap>
-      <div className="img">
-        <img src={ImageMobile1} alt={ImageMobile1} />
+      <div className="div1">
+        <div className="img">{imageRender1}</div>
+        <div className="info">
+          <h1>About Us</h1>
+          <p>
+            Founded in 2010, we are a creative agency that produces lasting
+            results for our clients. We’ve partnered with many startups,
+            corporations, and nonprofits alike to craft designs that make real
+            impact. We’re always looking forward to creating brands, products,
+            and digital experiences that connect with our clients’ audiences.
+          </p>
+        </div>
       </div>
-      <div className="info">
-        <h1>About Us</h1>
-        <p>
-          Founded in 2010, we are a creative agency that produces lasting
-          results for our clients. We’ve partnered with many startups,
-          corporations, and nonprofits alike to craft designs that make real
-          impact. We’re always looking forward to creating brands, products, and
-          digital experiences that connect with our clients’ audiences.
-        </p>
-      </div>
-      <div className="img">
-        <img src={ImageMobile2} alt={ImageMobile1} />
-      </div>
-      <div className="info2">
-        <h1>World-class talent</h1>
-        <p>
-          We are a crew of strategists, problem-solvers, and technologists.
-          Every design is thoughtfully crafted from concept to launch, ensuring
-          success in its given market. We are constantly updating our skills in
-          a myriad of platforms. <br /> <br /> Our team is multi-disciplinary
-          and we are not merely interested in form — content and meaning are
-          just as important. We give great importance to craftsmanship, service,
-          and prompt delivery. Clients have always been impressed with our
-          high-quality outcomes that encapsulates their brand’s story and
-          mission.
-        </p>
+      <div className="div2">
+        <div className="img">{imageRender2}</div>
+        <div className="info2">
+          <h1>World-class talent</h1>
+          <p>
+            We are a crew of strategists, problem-solvers, and technologists.
+            Every design is thoughtfully crafted from concept to launch,
+            ensuring success in its given market. We are constantly updating our
+            skills in a myriad of platforms. <br /> <br /> Our team is
+            multi-disciplinary and we are not merely interested in form —
+            content and meaning are just as important. We give great importance
+            to craftsmanship, service, and prompt delivery. Clients have always
+            been impressed with our high-quality outcomes that encapsulates
+            their brand’s story and mission.
+          </p>
+        </div>
       </div>
     </HeaderWrap>
   );
@@ -42,7 +65,6 @@ function Header() {
 
 const HeaderWrap = styled.div`
   .img {
-    height: 32rem;
     img {
       width: 100%;
       background-size: cover;
@@ -56,6 +78,7 @@ const HeaderWrap = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: -0.5rem;
     h1 {
       font-family: Jost;
       font-style: normal;
@@ -89,6 +112,23 @@ const HeaderWrap = styled.div`
     }
     p {
       color: black;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .div1,
+    .div2 {
+      margin: 4rem 4rem 12rem 4rem;
+      border-radius: 15px;
+      overflow: hidden;
+
+      h1 {
+        font-size: 4.8rem;
+      }
+      p {
+        font-size: 1.6rem;
+        width: 90%;
+      }
     }
   }
 `;

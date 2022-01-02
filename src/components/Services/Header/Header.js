@@ -72,4 +72,19 @@ const HeaderWrap = styled.div`
       width: 32.7rem;
     }
   }
+
+  @media (min-width: 768px) {
+    margin: 4rem;
+    border-radius: 15px;
+    div {
+      h1 {
+        font-size: 4.8rem;
+        width: 80%;
+      }
+      p {
+        font-size: 1.6rem;
+        width: 80%;
+      }
+    }
+  }
 `;

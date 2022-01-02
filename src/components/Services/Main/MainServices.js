@@ -94,6 +94,15 @@ export function MainServicesGraph() {
 const MainServicesWrap = styled.div`
   margin: 9.6rem 2.4rem;
   .data {
-    margin-top: 9.6rem;
+    margin: 9.6rem auto;
+  }
+
+  @media (min-width: 768px) {
+    .data {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   }
 `;
