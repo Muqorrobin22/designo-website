@@ -65,6 +65,11 @@ function FeaturesHome() {
 
 const FeaturesWrap = styled.div`
   margin-top: 8rem;
+  @media (min-width: 1440px) {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16.5rem;
+  }
 `;
 
 export default FeaturesHome;

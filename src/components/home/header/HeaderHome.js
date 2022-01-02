@@ -18,15 +18,18 @@ function HeaderHome() {
   return (
     <HeaderWrap>
       <div className="info">
-        <h1>Award-winning custom designs and digital branding solutions</h1>
-        <p>
-          With over 10 years in the industry, we are experienced in creating
-          fully responsive websites, app design, and engaging brand experiences.
-          Find out more about our services.
-        </p>
-        <Button1 dark to="/about">
-          Learn more
-        </Button1>
+        <div className="text">
+          <h1>Award-winning custom designs and digital branding solutions</h1>
+          <p>
+            With over 10 years in the industry, we are experienced in creating
+            fully responsive websites, app design, and engaging brand
+            experiences. Find out more about our services.
+          </p>
+          <Button1 dark to="/about">
+            Learn more
+          </Button1>
+        </div>
+
         <img src={Image} alt={Image} />
       </div>
     </HeaderWrap>
@@ -48,6 +51,12 @@ const HeaderWrap = styled.header`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    .text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
     h1 {
       font-family: Jost;
       font-style: normal;
@@ -113,12 +122,30 @@ const HeaderWrap = styled.header`
     }
   }
   @media (min-width: 1440px) {
-    display: grid;
-    grid-template-columns: minmax(61rem, 1fr) minmax(83rem, 1fr);
-
-    .img {
+    margin: 0 16.5rem;
+    height: 64rem;
+    .info {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: none;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      .text {
+        align-items: flex-start;
+        padding-left: 9.5rem;
+        transform: translateY(-10rem);
+        h1,
+        p {
+          text-align: left;
+          width: 54rem;
+        }
+      }
       img {
-        height: 100%;
+        margin-right: -5.5rem;
+        transform: translateY(8rem);
       }
     }
   }

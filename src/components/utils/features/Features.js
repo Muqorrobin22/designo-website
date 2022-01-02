@@ -60,6 +60,9 @@ const FeatureWrap = styled.div`
   @media (min-width: 768px) {
     display: flex;
   }
+  @media (min-width: 1440px) {
+    width: 35rem;
+  }
 `;
 
 const FeatureWrapTablet = styled(FeatureWrap)`

@@ -66,6 +66,28 @@ const TouchWrap = styled.div`
       margin-bottom: 3.2rem;
     }
   }
+
+  @media (min-width: 1440px) {
+    width: 111rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 9.5rem;
+    box-sizing: border-box;
+    .text {
+      h1 {
+        font-size: 4.8rem;
+        text-align: left;
+        width: 37rem;
+      }
+      p {
+        text-align: left;
+        font-size: 1.6rem;
+        width: 37rem;
+      }
+    }
+  }
 `;
 
 export default GetInTouch;
