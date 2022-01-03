@@ -2,19 +2,24 @@ import React from "react";
 import styled from "styled-components";
 import { Button1 } from "../../utils/Buttons/Button";
 import Input, { TextArea } from "../../utils/Inputs/Input";
+import Zoom from "react-reveal/Zoom";
 
 function Header() {
   return (
     <HeaderWrap>
       <div className="wrap">
         <div className="wrapText">
-          <h1>Contact us</h1>
-          <p>
-            Ready to take it to the next level? Let’s talk about your project or
-            idea and find out how we can help your business grow. If you are
-            looking for unique digital experiences that’s relatable to your
-            users, drop us a line.
-          </p>
+          <Zoom right cascade>
+            <h1>Contact us</h1>
+          </Zoom>
+          <Zoom left cascade>
+            <p>
+              Ready to take it to the next level? Let’s talk about your project
+              or idea and find out how we can help your business grow. If you
+              are looking for unique digital experiences that’s relatable to
+              your users, drop us a line.
+            </p>
+          </Zoom>
         </div>
         <div className="wrapInput">
           <div className="inputs">
@@ -24,9 +29,11 @@ function Header() {
             <TextArea placeholder="Your Messages" />
           </div>
           <div className="button">
-            <Button1 to="/contact" dark>
-              Submit
-            </Button1>
+            <Zoom>
+              <Button1 to="/contact" dark>
+                Submit
+              </Button1>
+            </Zoom>
           </div>
         </div>
       </div>

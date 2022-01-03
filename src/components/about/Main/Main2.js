@@ -4,6 +4,7 @@ import ImageMobile3 from "../../../assets/about/mobile/image-real-deal.jpg";
 import ImageTablet3 from "../../../assets/about/tablet/image-real-deal.jpg";
 import ImageDesktop3 from "../../../assets/about/desktop/image-real-deal.jpg";
 import { useMediaQuery } from "react-responsive";
+import Zoom from "react-reveal/Zoom";
 
 function Main2() {
   const isTablet = useMediaQuery({ query: "(min-width: 768px)" });
@@ -19,22 +20,24 @@ function Main2() {
     imageRender1 = <img src={ImageMobile3} alt={ImageMobile3} />;
   }
   return (
-    <Wrap>
-      <div className="img">{imageRender1}</div>
-      <div className="info2">
-        <h1>The real deal</h1>
-        <p>
-          As strategic partners in our clients’ businesses, we are ready to take
-          on any challenge as our own. Solving real problems require empathy and
-          collaboration, and we strive to bring a fresh perspective to every
-          opportunity. We make design and technology more accessible and give
-          you tools to measure success. <br /> <br /> We are visual storytellers
-          in appealing and captivating ways. By combining business and marketing
-          strategies, we inspire audiences to take action and drive real
-          results.
-        </p>
-      </div>
-    </Wrap>
+    <Zoom>
+      <Wrap>
+        <div className="img">{imageRender1}</div>
+        <div className="info2">
+          <h1>The real deal</h1>
+          <p>
+            As strategic partners in our clients’ businesses, we are ready to
+            take on any challenge as our own. Solving real problems require
+            empathy and collaboration, and we strive to bring a fresh
+            perspective to every opportunity. We make design and technology more
+            accessible and give you tools to measure success. <br /> <br /> We
+            are visual storytellers in appealing and captivating ways. By
+            combining business and marketing strategies, we inspire audiences to
+            take action and drive real results.
+          </p>
+        </div>
+      </Wrap>
+    </Zoom>
   );
 }
 

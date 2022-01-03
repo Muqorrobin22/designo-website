@@ -2,19 +2,22 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { ReactComponent as Arrow } from "../../../assets/shared/desktop/icon-right-arrow.svg";
+import Zoom from "react-reveal/Zoom";
 
 function Service({ images, title, margin, to, grid }) {
   return (
-    <ServiceWrap images={images} margin={margin} grid={grid}>
-      <div className="info">
-        <h1> {title} </h1>
-        <div className="link">
-          <Link to={`/${to}`}>View Project</Link>
-          <Arrow />
+    <Zoom>
+      <ServiceWrap images={images} margin={margin} grid={grid}>
+        <div className="info">
+          <h1> {title} </h1>
+          <div className="link">
+            <Link to={`/${to}`}>View Project</Link>
+            <Arrow />
+          </div>
         </div>
-      </div>
-      <div className="overlay"></div>
-    </ServiceWrap>
+        <div className="overlay"></div>
+      </ServiceWrap>
+    </Zoom>
   );
 }
 

@@ -2,35 +2,35 @@ import React from "react";
 import styled from "styled-components";
 import { Button1 } from "../../utils/Buttons/Button";
 import Image from "./../../../assets/home/desktop/image-hero-phone.png";
-// import imagesTablet from "./../../../assets/home/tablet/image-web-design.jpg";
-
-//   let ImagesRendering;
-
-//   if (isDesktop) {
-//     ImagesRendering = <img src={imagesDesktop} alt={imagesDesktop} />;
-//   } else if (isTablet) {
-//     ImagesRendering = <img src={imagesTablet} alt={imagesTablet} />;
-//   } else {
-//     ImagesRendering = <img src={images} alt={images} />;
-//   }
+import Zoom from "react-reveal/Zoom";
+import Bounce from "react-reveal/Bounce";
+import Flip from "react-reveal/Flip";
 
 function HeaderHome() {
   return (
     <HeaderWrap>
       <div className="info">
         <div className="text">
-          <h1>Award-winning custom designs and digital branding solutions</h1>
-          <p>
-            With over 10 years in the industry, we are experienced in creating
-            fully responsive websites, app design, and engaging brand
-            experiences. Find out more about our services.
-          </p>
-          <Button1 dark to="/about">
-            Learn more
-          </Button1>
+          <Zoom left cascade>
+            <h1>Award-winning custom designs and digital branding solutions</h1>
+          </Zoom>
+          <Zoom right cascade>
+            <p>
+              With over 10 years in the industry, we are experienced in creating
+              fully responsive websites, app design, and engaging brand
+              experiences. Find out more about our services.
+            </p>
+          </Zoom>
+          <Bounce right>
+            <Button1 dark to="/about">
+              Learn more
+            </Button1>
+          </Bounce>
         </div>
 
-        <img src={Image} alt={Image} />
+        <Flip right className="img">
+          <img src={Image} alt={Image} />
+        </Flip>
       </div>
     </HeaderWrap>
   );
@@ -143,7 +143,7 @@ const HeaderWrap = styled.header`
           width: 54rem;
         }
       }
-      img {
+      .img {
         margin-right: -5.5rem;
         transform: translateY(8rem);
       }

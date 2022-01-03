@@ -1,7 +1,6 @@
 import WebDesign from "../../../assets/home/mobile/image-web-design.jpg";
 import WebDesignTablet from "../../../assets/home/tablet/image-web-design.jpg";
 import WebDesignDesktopLarge from "../../../assets/home/desktop/image-web-design-large.jpg";
-import WebDesignDesktopSmall from "../../../assets/home/desktop/image-web-design-small.jpg";
 import AppDesign from "../../../assets/home/mobile/image-app-design.jpg";
 import AppDesignTablet from "../../../assets/home/tablet/image-app-design.jpg";
 import AppDesignDektop from "../../../assets/home/desktop/image-app-design.jpg";
@@ -30,8 +29,6 @@ const ServiceData = [
     img: WebDesign,
     imgTablet: WebDesignTablet,
     imgDesktop: WebDesignDesktopLarge,
-    // imgDesktopLarge: WebDesignDesktopLarge,
-    // imgDesktopSmall: WebDesignDesktopSmall,
     to: "web-design",
     text: "We build websites that serve as powerful marketing tools and bring memorable brand experiences.",
     project: [

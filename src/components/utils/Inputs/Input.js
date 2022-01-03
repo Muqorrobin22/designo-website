@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { ReactComponent as Error } from "../../../assets/contact/desktop/icon-error.svg";
+import Fade from "react-reveal/Fade";
 
 function Input({ type, placeholder }) {
   const [input, setInput] = useState("");
@@ -23,23 +24,27 @@ function Input({ type, placeholder }) {
   );
 
   return (
-    <InputWrap validInput={inputValid}>
-      <input
-        type={type}
-        placeholder={placeholder}
-        onChange={inputChangeHandler}
-        value={input}
-      />
-      {error}
-    </InputWrap>
+    <Fade right>
+      <InputWrap validInput={inputValid}>
+        <input
+          type={type}
+          placeholder={placeholder}
+          onChange={inputChangeHandler}
+          value={input}
+        />
+        {error}
+      </InputWrap>
+    </Fade>
   );
 }
 
 export function TextArea({ placeholder }) {
   return (
-    <InputWrap>
-      <textarea placeholder={placeholder} />
-    </InputWrap>
+    <Fade left>
+      <InputWrap>
+        <textarea placeholder={placeholder} />
+      </InputWrap>
+    </Fade>
   );
 }
 

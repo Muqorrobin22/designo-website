@@ -14,17 +14,6 @@ const isActive = ({ isActive }) => {
   };
 };
 
-const LinkVariants = {
-  visible: {
-    scale: 1.2,
-    opacity: 0.3,
-    transition: {
-      type: "spring",
-      stifness: 300,
-    },
-  },
-};
-
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 

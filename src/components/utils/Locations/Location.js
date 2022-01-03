@@ -1,27 +1,30 @@
 import React from "react";
 import styled from "styled-components";
+import Zoom from "react-reveal/Zoom";
 
 function Location({ Images, title, address, contact1, contact2 }) {
   return (
-    <Wrap>
-      <div className="img">
-        <img src={Images} alt={Images} />
-      </div>
-      <div className="info2">
-        <h1> {title} </h1>
-        <div className="information">
-          <div>
-            <h2>Designo Central Office</h2>
-            <p>{address}</p>
-          </div>
-          <div>
-            <h2>Contact </h2>
-            <p>{contact1}</p>
-            <p>{contact2}</p>
+    <Zoom>
+      <Wrap>
+        <div className="img">
+          <img src={Images} alt={Images} />
+        </div>
+        <div className="info2">
+          <h1> {title} </h1>
+          <div className="information">
+            <div>
+              <h2>Designo Central Office</h2>
+              <p>{address}</p>
+            </div>
+            <div>
+              <h2>Contact </h2>
+              <p>{contact1}</p>
+              <p>{contact2}</p>
+            </div>
           </div>
         </div>
-      </div>
-    </Wrap>
+      </Wrap>
+    </Zoom>
   );
 }
 

@@ -1,17 +1,20 @@
 import React from "react";
 import styled from "styled-components";
+import Jump from "react-reveal/Jump";
 
 function ShowCast({ images, title, desc }) {
   return (
-    <ShowCastWrap>
-      <div className="img">
-        <img src={images} alt={images} />
-      </div>
-      <div className="description">
-        <h1> {title} </h1>
-        <p> {desc} </p>
-      </div>
-    </ShowCastWrap>
+    <Jump>
+      <ShowCastWrap>
+        <div className="img">
+          <img src={images} alt={images} />
+        </div>
+        <div className="description">
+          <h1> {title} </h1>
+          <p> {desc} </p>
+        </div>
+      </ShowCastWrap>
+    </Jump>
   );
 }
 

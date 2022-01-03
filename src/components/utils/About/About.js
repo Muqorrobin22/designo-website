@@ -1,16 +1,19 @@
 import React from "react";
 import styled from "styled-components";
 import { Button1 } from "../Buttons/Button";
+import Tada from "react-reveal/Tada";
 
 function About({ Svg, title }) {
   return (
-    <AboutWrap>
-      {Svg}
-      <div>
-        <h1>{title}</h1>
-        <Button1 to="/location">See Location</Button1>
-      </div>
-    </AboutWrap>
+    <Tada>
+      <AboutWrap>
+        {Svg}
+        <div>
+          <h1>{title}</h1>
+          <Button1 to="/location">See Location</Button1>
+        </div>
+      </AboutWrap>
+    </Tada>
   );
 }
 

@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import Bounce from "react-reveal/Bounce";
 
 function Features({ Svg, title, text }) {
   return (
-    <div>
+    <Bounce>
       <FeatureWrap>
         {Svg}
         <div>
@@ -11,19 +12,21 @@ function Features({ Svg, title, text }) {
           <p> {text} </p>
         </div>
       </FeatureWrap>
-    </div>
+    </Bounce>
   );
 }
 
 export function FeaturesTablet({ Svg, title, text }) {
   return (
-    <FeatureWrapTablet>
-      {Svg}
-      <div>
-        <h1>{title}</h1>
-        <p> {text} </p>
-      </div>
-    </FeatureWrapTablet>
+    <Bounce>
+      <FeatureWrapTablet>
+        {Svg}
+        <div>
+          <h1>{title}</h1>
+          <p> {text} </p>
+        </div>
+      </FeatureWrapTablet>
+    </Bounce>
   );
 }
 
