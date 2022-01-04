@@ -56,6 +56,7 @@ const HeaderWrap = styled.header`
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      z-index: 100;
     }
     h1 {
       font-family: Jost;
