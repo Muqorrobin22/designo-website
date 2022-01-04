@@ -22,7 +22,7 @@ function Navbar() {
   };
 
   return (
-    <NavWrap role="navigation">
+    <NavWrap>
       <NavLink to="/">
         <img src={Logo} alt={Logo} />
       </NavLink>

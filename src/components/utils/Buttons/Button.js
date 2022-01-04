@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 
 export function Button1({ children, to, dark }) {
   return (
-    <ButtonWrap1 dark={dark}>
-      <Link to={to}>{children}</Link>
-    </ButtonWrap1>
+    <Link to={to}>
+      <ButtonWrap1>{children}</ButtonWrap1>
+    </Link>
   );
 }
 
