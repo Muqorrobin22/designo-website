@@ -7,7 +7,7 @@ function Features({ Svg, title, text }) {
     <Bounce>
       <FeatureWrap>
         {Svg}
-        <div>
+        <div role="banner">
           <h1>{title}</h1>
           <p> {text} </p>
         </div>
@@ -21,7 +21,7 @@ export function FeaturesTablet({ Svg, title, text }) {
     <Bounce>
       <FeatureWrapTablet>
         {Svg}
-        <div>
+        <div role="banner">
           <h1>{title}</h1>
           <p> {text} </p>
         </div>

@@ -10,10 +10,8 @@ function Service({ images, title, margin, to, grid }) {
       <ServiceWrap images={images} margin={margin} grid={grid}>
         <div className="info">
           <h1> {title} </h1>
-          <div className="link">
-            <Link to={`/${to}`} role="button">
-              View Project
-            </Link>
+          <div className="link" role="navigation">
+            <Link to={`/${to}`}>View Project</Link>
             <Arrow />
           </div>
         </div>

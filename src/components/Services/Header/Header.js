@@ -7,7 +7,7 @@ const ServiceData = servicesData();
 export function HeaderWebDesign() {
   return (
     <HeaderWrap>
-      <div>
+      <div role="banner">
         <h1>{ServiceData[0].title}</h1>
         <p>{ServiceData[0].text}</p>
       </div>
@@ -17,7 +17,7 @@ export function HeaderWebDesign() {
 export function HeaderAppDesign() {
   return (
     <HeaderWrap>
-      <div>
+      <div role="banner">
         <h1>{ServiceData[1].title}</h1>
         <p>{ServiceData[1].text}</p>
       </div>
@@ -27,7 +27,7 @@ export function HeaderAppDesign() {
 export function HeaderGraphicDesign() {
   return (
     <HeaderWrap>
-      <div>
+      <div role="banner">
         <h1>{ServiceData[2].title}</h1>
         <p>{ServiceData[2].text}</p>
       </div>
