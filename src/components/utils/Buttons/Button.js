@@ -4,13 +4,15 @@ import { Link } from "react-router-dom";
 
 export function Button1({ children, to, dark }) {
   return (
-    <ButtonWrap1 dark={dark}>
-      <Link to={to}>{children}</Link>
-    </ButtonWrap1>
+    // <ButtonWrap1 dark={dark}>
+    <Links dark={dark} to={to}>
+      {children}
+    </Links>
+    // </ButtonWrap1>
   );
 }
 
-const ButtonWrap1 = styled.div`
+const Links = styled(Link)`
   font-family: Jost;
   font-style: normal;
   font-weight: 500;
@@ -32,10 +34,10 @@ const ButtonWrap1 = styled.div`
   padding: 1.8rem 2.4rem;
   transition: all 0.3s ease;
   z-index: 5;
-  a {
-    text-decoration: none;
-    color: ${(props) => (props.dark ? "black" : "white")};
-  }
+
+  text-decoration: none;
+  color: ${(props) => (props.dark ? "black" : "white")};
+
   &:hover {
     background-color: var(--color-secondary-peach);
     color: white;

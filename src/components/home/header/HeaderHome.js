@@ -21,11 +21,13 @@ function HeaderHome() {
               experiences. Find out more about our services.
             </p>
           </Zoom>
-          <Bounce right>
-            <Button1 dark to="/about">
-              Learn more
-            </Button1>
-          </Bounce>
+          <div className="button">
+            <Bounce right>
+              <Button1 dark to="/about">
+                Learn more
+              </Button1>
+            </Bounce>
+          </div>
         </div>
 
         <Flip right className="img">
@@ -57,6 +59,9 @@ const HeaderWrap = styled.header`
       justify-content: center;
       align-items: center;
       z-index: 100;
+      .button {
+        margin-top: 2.4rem;
+      }
     }
     h1 {
       font-family: Jost;
@@ -82,7 +87,7 @@ const HeaderWrap = styled.header`
       color: #ffffff;
     }
     img {
-      margin-top: -12rem;
+      margin-top: -10rem;
     }
   }
 

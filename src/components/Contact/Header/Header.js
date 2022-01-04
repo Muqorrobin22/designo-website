@@ -93,7 +93,7 @@ const HeaderWrap = styled.div`
       align-items: center;
       .button {
         align-self: center;
-        margin-top: 3rem;
+        margin-top: 6rem;
       }
     }
 
@@ -122,8 +122,11 @@ const HeaderWrap = styled.div`
       .inputs {
         width: 90%;
       }
-      .button {
-        align-self: flex-end;
+      .wrapInput {
+        .button {
+          margin-top: 6rem;
+          align-self: flex-end;
+        }
       }
     }
   }
