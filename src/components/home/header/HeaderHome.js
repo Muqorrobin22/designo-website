@@ -8,7 +8,7 @@ import Flip from "react-reveal/Flip";
 
 function HeaderHome() {
   return (
-    <HeaderWrap role="banner">
+    <HeaderWrap>
       <div className="info">
         <div className="text">
           <Zoom left cascade>

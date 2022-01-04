@@ -11,7 +11,9 @@ function Service({ images, title, margin, to, grid }) {
         <div className="info">
           <h1> {title} </h1>
           <div className="link">
-            <Link to={`/${to}`}>View Project</Link>
+            <Link to={`/${to}`} role="link">
+              View Project
+            </Link>
             <Arrow />
           </div>
         </div>

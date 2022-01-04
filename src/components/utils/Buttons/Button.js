@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 
 export function Button1({ children, to, dark }) {
   return (
-    <Link to={to}>
-      <ButtonWrap1>{children}</ButtonWrap1>
-    </Link>
+    <ButtonWrap1 dark={dark}>
+      <Link to={to}>{children}</Link>
+    </ButtonWrap1>
   );
 }
 
-const ButtonWrap1 = styled.button`
+const ButtonWrap1 = styled.div`
   font-family: Jost;
   font-style: normal;
   font-weight: 500;

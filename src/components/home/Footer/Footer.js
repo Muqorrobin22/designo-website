@@ -55,7 +55,7 @@ export function Footer() {
           <br /> All Rights Reserved
         </p>
         <div className="social">
-          <Instagram href="https://www.instagram.com/muqorrobinn__/" />
+          <Instagram />
           <Twitter />
           <Fb />
         </div>
