@@ -8,7 +8,7 @@ export function HeaderWebDesign() {
   return (
     <HeaderWrap>
       <div>
-        <h1>{ServiceData[0].title}</h1>
+        <h1 role="banner">{ServiceData[0].title}</h1>
         <p>{ServiceData[0].text}</p>
       </div>
     </HeaderWrap>
@@ -18,7 +18,7 @@ export function HeaderAppDesign() {
   return (
     <HeaderWrap>
       <div>
-        <h1>{ServiceData[1].title}</h1>
+        <h1 role="banner">{ServiceData[1].title}</h1>
         <p>{ServiceData[1].text}</p>
       </div>
     </HeaderWrap>
@@ -28,7 +28,7 @@ export function HeaderGraphicDesign() {
   return (
     <HeaderWrap>
       <div>
-        <h1>{ServiceData[2].title}</h1>
+        <h1 role="banner">{ServiceData[2].title}</h1>
         <p>{ServiceData[2].text}</p>
       </div>
     </HeaderWrap>

@@ -15,7 +15,7 @@ const isActive = ({ isActive }) => {
 
 export function Footer() {
   return (
-    <FooterWrap>
+    <FooterWrap role="contentinfo">
       <div className="row1">
         <img src={Logo} alt={Logo} />
 
@@ -66,7 +66,7 @@ export function Footer() {
 
 export function FooterWithGetInTouch() {
   return (
-    <FooterWrapInGetTouch>
+    <FooterWrapInGetTouch role="contentinfo">
       <GetInTouch />
       <div className="row1">
         <img src={Logo} alt={Logo} />
