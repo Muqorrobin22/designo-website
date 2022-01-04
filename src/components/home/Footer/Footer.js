@@ -233,6 +233,7 @@ const FooterWrap = styled.footer`
 
 const FooterWrapInGetTouch = styled(FooterWrap)`
   position: relative;
+  margin-top: 30rem;
   @media (min-width: 1440px) {
     margin-top: 31rem;
   }
