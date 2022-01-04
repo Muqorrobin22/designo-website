@@ -13,6 +13,7 @@ import LocationMain from "./components/locations/LocationMain";
 import ContactMain from "./components/Contact/ContactMain";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import "./index.css";
+import ScrollToTop from "./components/utils/ScrollToTop";
 
 const RoutePath = () => {
   const Location = useLocation();
@@ -25,15 +26,17 @@ const RoutePath = () => {
         key={Location.key}
         unmountOnExit
       >
-        <Routes>
-          <Route path="/" element={<MainHome />} />
-          <Route path="/about" element={<AboutMain />} />
-          <Route path="/location" element={<LocationMain />} />
-          <Route path="/contact" element={<ContactMain />} />
-          <Route path="/web-design" element={<WebDesign />} />
-          <Route path="/app-design" element={<AppDesign />} />
-          <Route path="/graphic-design" element={<GraphicDesign />} />
-        </Routes>
+        <ScrollToTop>
+          <Routes>
+            <Route path="/" element={<MainHome />} />
+            <Route path="/about" element={<AboutMain />} />
+            <Route path="/location" element={<LocationMain />} />
+            <Route path="/contact" element={<ContactMain />} />
+            <Route path="/web-design" element={<WebDesign />} />
+            <Route path="/app-design" element={<AppDesign />} />
+            <Route path="/graphic-design" element={<GraphicDesign />} />
+          </Routes>
+        </ScrollToTop>
       </CSSTransition>
     </TransitionGroup>
   );
